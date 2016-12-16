@@ -1,8 +1,27 @@
 <?php
 
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
+/**
+ * Class of comercials. The goal is to show the connection between an Advertise
+ * published/unpublished and the Showcase
+ * 
+ */
+class Advertising {
+  
+  protected $isPublished;
+  
+  public function publish() {
+    $this->isPublished = true;
+  } 
+  
+  public function unPublish() {
+    $this->isPublished = false;
+  }
+  
+  public function isPublished() {
+    
+    return $this->isPublished;
+    
+  }
+  
+}
