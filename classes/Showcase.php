@@ -12,11 +12,13 @@ class Showcase {
 
   
   // Showcase to be alive needs an advertising
+  // Dependency Injection
   public function __construct(Advertising $advertising) {
     $this->advertising = $advertising;
     echo "constructor advertising ok<br>";
   }
 
+  // Make the advertising unpublished
   public function unPublishAdvertising($advertising = true) {
     if ($advertising === true) {
 
@@ -28,6 +30,7 @@ class Showcase {
     echo "advertising unpublished<br>";
   }
   
+  // Make the advertising published
   public function publishAdvertising() {
     if ($this->advertising->isPublished() == false) {
 
